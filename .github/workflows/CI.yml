@@ -13,16 +13,16 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: npm run typecheck
 
       - name: Lint
-        run: pnpm lint
+        run: npm run lint
 
       - name: Build
-        run: pnpm build
+        run: npm run build
 #  on: [push, pull_request]
 
 # env:
