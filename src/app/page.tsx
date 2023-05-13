@@ -29,15 +29,6 @@ export default function Home() {
       ) : (
         <div>
           <p>You are not signed in.</p>
-          <button
-            onClick={() =>
-              signIn("github", {
-                callbackUrl: "/",
-              })
-            }
-          >
-            Sign in with GitHub
-          </button>
         </div>
       )}
     </main>

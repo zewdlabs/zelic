@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+env:
+  GITHUB_ID: ${{ secrets.GITHUB_ID }}
+  GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
+  NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+  NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +30,3 @@ jobs:
       - name: Build
         run: npm run build
 #  on: [push, pull_request]
-
-# env:
-#   DATABASE_URL: "https://fake.com"
