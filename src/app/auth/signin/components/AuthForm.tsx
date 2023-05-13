@@ -15,7 +15,7 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 export function AuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
-  const callbackurl = "http://localhost:3000/api/auth/callback";
+  const callbackurl = "http://zelic.vercel.app/api/auth/callback";
 
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
