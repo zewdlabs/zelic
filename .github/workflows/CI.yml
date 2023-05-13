@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  GITHUB_ID: ${{ secrets.GITHUB_ID }}
-  GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
+  GITHUB_ID: ${{ secrets.GHUB_ID }}
+  GITHUB_SECRET: ${{ secrets.GHUB_SECRET }}
   NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
   NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
 
