@@ -68,7 +68,7 @@ export function AuthForm({ className, ...props }: UserAuthFormProps) {
           signIn("github");
         }}
       >
-        {isLoading ? (
+        {isGitHubLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
           <Icons.gitHub className="mr-2 h-4 w-4" />
@@ -85,7 +85,7 @@ export function AuthForm({ className, ...props }: UserAuthFormProps) {
           signIn("google");
         }}
       >
-        {isLoading ? (
+        {isGoogleLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
           <Icons.google className="mr-2 h-4 w-4" />
