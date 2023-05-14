@@ -1,6 +1,7 @@
+import { cn } from "@/lib/utils";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Provider from "./provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,8 +59,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Provider>{children}</Provider>
+      <body className={cn("antialiased min-h-screen", inter.className)}>
+        {children}
+        <Toaster />
       </body>
     </html>
   );

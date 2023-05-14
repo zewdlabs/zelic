@@ -8,7 +8,10 @@ export default withAuth(
     const token = await getToken({ req, secret: env.NEXTAUTH_SECRET });
 
     const isAuth = !!token;
-    const isAuthPage = req.nextUrl.pathname.startsWith("/auth");
+    const isAuthPage =
+      req.nextUrl.pathname.startsWith("/login") ||
+      req.nextUrl.pathname.startsWith("/register");
+
     const isPublicHomePage = req.nextUrl.pathname.startsWith("/");
 
     if (!isAuth && !isAuthPage && !isPublicHomePage) {
@@ -19,7 +22,7 @@ export default withAuth(
       }
 
       return NextResponse.redirect(
-        new URL(`/auth/login?from=${encodeURIComponent(from)}`, req.url)
+        new URL(`/login?from=${encodeURIComponent(from)}`, req.url)
       );
     }
 
@@ -41,5 +44,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/auth/:path*"],
+  matcher: ["/dashboard/:path*", "/login", "/register"],
 };
