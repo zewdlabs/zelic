@@ -39,6 +39,7 @@ export const metadata = {
       },
     },
   },
+  
   twitter: {
     title: "Zelic",
     card: "summary_large_image",

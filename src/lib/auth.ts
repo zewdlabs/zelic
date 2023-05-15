@@ -13,10 +13,10 @@ export const authOptions: NextAuthOptions = {
       clientId: env.GITHUB_ID,
       clientSecret: env.GITHUB_SECRET,
     }),
-    // GoogleProvider({
-    //   clientId: process.env.GOOGLE_ID!,
-    //   clientSecret: process.env.GOOGLE_SECRET!,
-    // }),
+    GoogleProvider({
+      clientId: env.GOOGLE_ID,
+      clientSecret: env.GOOGLE_SECRET,
+    }),
   ],
   callbacks: {
     async session({ token, session }) {
