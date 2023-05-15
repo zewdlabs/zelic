@@ -6,6 +6,9 @@ export const env = createEnv({
     GITHUB_ID: z.string().min(1),
     GITHUB_SECRET: z.string().min(1),
 
+    GOOGLE_ID: z.string().min(1),
+    GOOGLE_SECRET: z.string().min(1),
+
     NEXTAUTH_URL: z.string().min(1).optional(),
     NEXTAUTH_SECRET: z.string().min(1),
   },
@@ -18,6 +21,9 @@ export const env = createEnv({
 
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+
+    GOOGLE_ID: process.env.GOOGLE_ID,
+    GOOGLE_SECRET: process.env.GOOGLE_SECRET,
   },
 });
 
