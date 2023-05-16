@@ -65,7 +65,7 @@ export function AuthForm({ className, ...props }: UserAuthFormProps) {
         disabled={isLoading || isGoogleLoading || isGitHubLoading}
         onClick={() => {
           setIsGitHubLoading(true);
-          signIn("github", { callbackUrl: "/dashboard" });
+          signIn("github");
         }}
       >
         {isGitHubLoading ? (
@@ -82,7 +82,7 @@ export function AuthForm({ className, ...props }: UserAuthFormProps) {
         disabled={isLoading || isGitHubLoading || isGoogleLoading}
         onClick={() => {
           setIsGoogleLoading(true);
-          signIn("google", { callbackUrl: "/dashboard" });
+          signIn("google");
         }}
       >
         {isGoogleLoading ? (
