@@ -12,9 +12,7 @@ export default withAuth(
       req.nextUrl.pathname.startsWith("/login") ||
       req.nextUrl.pathname.startsWith("/register");
 
-    const isPublicHomePage = req.nextUrl.pathname.startsWith("/");
-
-    if (!isAuth && !isAuthPage && !isPublicHomePage) {
+    if (!isAuth && !isAuthPage) {
       let from = req.nextUrl.pathname;
 
       if (req.nextUrl.search) {
