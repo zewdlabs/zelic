@@ -12,6 +12,7 @@ env:
   NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
   GOOGLE_ID: ${{ secrets.GOOGLE_ID }}
   GOOGLE_SECRET: ${{ secrets.GOOGLE_SECRET }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 jobs:
   build:
