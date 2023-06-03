@@ -4,27 +4,11 @@ import { dashboardConfig } from "@/lib/config/dashboard";
 import { getCurrentUser } from "@/lib/session";
 import { MainNav } from "./components/Navbar";
 
-import Link from "next/link";
-import { User } from "next-auth";
-import { signOut } from "next-auth/react";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Icons } from "@/components/Icons";
-
-interface DashboardLayoutProps {
-  children?: React.ReactNode;
-}
-
 export default async function DashboardLayout({
   children,
-}: DashboardLayoutProps) {
+}: {
+  children: React.ReactNode;
+}) {
   const user = await getCurrentUser();
 
   if (!user) {
@@ -38,7 +22,7 @@ export default async function DashboardLayout({
           <MainNav items={dashboardConfig.mainNav} user={user} />
         </div>
       </header>
-      <div className="container grid flex-1 gap-12 md:grid-cols-[200px_1fr]">
+      <div className="container grid flex-1 gap-12">
         {/* <aside className="hidden w-[200px] flex-col md:flex">
           <DashboardNav items={dashboardConfig.sidebarNav} />
         </aside> */}

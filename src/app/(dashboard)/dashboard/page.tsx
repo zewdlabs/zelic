@@ -1,24 +1,27 @@
 import { Button } from "@/components/ui/button";
-import { getCurrentUser } from "@/lib/session";
-import { signOut } from "next-auth/react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-export default async function IndexPage() {
-  const user = await getCurrentUser();
-
+export default async function Dashboard() {
   return (
-    <>
-      {user ? (
-        <div>
-          <p>
-            You are signed in as{" "}
-            <span className="font-semibold">{user?.email}</span>
-          </p>
-        </div>
-      ) : (
-        <div>
-          <p>You are not signed in.</p>
-        </div>
-      )}
-    </>
+    <div className="flex items-center justify-center">
+      <Card className="w-full px-8 py-12 flex flex-col justify-center items-center text-center">
+        <CardHeader>
+          <CardTitle className="text-2xl">No sites added</CardTitle>
+          <CardDescription>
+            Add your site to manage your site&apos;s feedbacks
+          </CardDescription>
+        </CardHeader>
+        <CardFooter>
+          <Button>Add your site</Button>
+        </CardFooter>
+      </Card>
+    </div>
   );
 }
