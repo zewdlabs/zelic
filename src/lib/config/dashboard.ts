@@ -4,21 +4,21 @@ export const dashboardConfig: DashboardConfig = {
   mainNav: [
     {
       title: "Feedbacks",
-      href: "/feedbacks",
+      href: "/dashboard/feedbacks",
     },
     {
       title: "Sites",
-      href: "/sites",
+      href: "/dashboard/sites",
     },
     {
       title: "Documentation",
       href: "/docs",
     },
-    // {
-    //   title: "Support",
-    //   href: "/support",
-    //   disabled: true,
-    // },
+    {
+      title: "Support",
+      href: "/support",
+      disabled: true,
+    },
   ],
   //   sidebarNav: [
   //     {
