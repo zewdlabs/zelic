@@ -11,7 +11,7 @@ export const metadata = {
     template: "%s | Zelic",
   },
 
-  canonical: "https://zelic.vercel.app",
+  canonical: "https://zelic.zewdlabs.tech",
 
   description: "An easy way to add comments or reviews to your static site.",
   keywords: ["comments", "reviews", "feedback", "static", "site"],

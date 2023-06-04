@@ -19,7 +19,7 @@ export default async function Dashboard() {
           </CardDescription>
         </CardHeader>
         <CardFooter>
-          <Button>Add your site</Button>
+          <Button>Add your Site</Button>
         </CardFooter>
       </Card>
     </div>
