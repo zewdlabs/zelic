@@ -16,7 +16,7 @@ export default async function Dashboard() {
       <Card className="w-full px-8 py-12 flex flex-col justify-center items-center text-center">
         <CardHeader>
           <CardTitle className={cn("text-xl leading-5 font-semibold")}>
-            You don't have any sites added yet
+            You don&apos;t have any sites added yet
           </CardTitle>
         </CardHeader>
         <div>
