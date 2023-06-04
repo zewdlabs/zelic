@@ -3,10 +3,8 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { getCurrentUser } from "@/lib/session";
 import localFont from "next/font/local";
-
 const fontHeading = localFont({
-  src: "./assets/fonts/CalSansSemiBold.woff2",
-  variable: "--font-heading",
+  src: "../../assets/fonts/CalSansSemiBold.woff2",
 });
 
 export default async function IndexPage() {
@@ -21,14 +19,14 @@ export default async function IndexPage() {
               fontHeading.className
             )}
           >
-            Streamline Website Feedbacks
+            Streamline website feedbacks
           </h1>
           <p
             className={cn(
               "max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8"
             )}
           >
-            Amplify Engagement and Empower Growth
+            Amplify engagement and empower growth
           </p>
           <div className="space-x-4">
             {user ? (
