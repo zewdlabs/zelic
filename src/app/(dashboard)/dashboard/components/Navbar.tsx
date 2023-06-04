@@ -87,9 +87,6 @@ export function MainNav({
             )}
           >
             <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
-              {/* <Link href="/" className="flex items-center space-x-2">
-                <span className="font-bold">{siteConfig.name}</span>
-              </Link> */}
               <TeamSwitcher className="flex w-full" user={user} />
               <nav className="grid grid-flow-row auto-rows-max text-sm">
                 {items.map((item, index) => (
@@ -118,6 +115,7 @@ export function MainNav({
             className="h-9 md:w-[100px] lg:w-[300px]"
           />
         </div>
+        {/* user dropdown menu */}
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar className="h-8 w-8">
@@ -160,10 +158,6 @@ export function MainNav({
                 <Settings className="mr-2 h-4 w-4" />
                 <Link href="/dashboard/settings">Settings</Link>
                 {/* <DropdownMenuShortcut>⌘S</DropdownMenuShortcut> */}
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <PlusCircle className="mr-2 h-4 w-4" />
-                <Link href="">New Team</Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
